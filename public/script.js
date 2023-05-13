@@ -44,7 +44,7 @@ form.addEventListener('submit', event => {
     .then(() => {
       alert('Product added');
       form.reset();
-      window.location.reload(); // reload the page
+      window.location.reload(); 
 
     })
     .catch(err => {
@@ -67,20 +67,3 @@ function deleteUser(event, id) {
 }
 
 
-// function editUser(event, id) {
-//   event.stopPropagation();
-
-//   const newType = prompt('Enter new type of expense:');
-//   const newDate = prompt('Enter new date:');
-
-//   axios.put(`http://localhost:5000/users/${id}`, { expense: newType, date: newDate }, {
-//     headers: { 'Content-Type': 'application/json' }
-//   })
-//     .then(() => {
-//       console.log("User updated");
-//       window.location.reload();
-//     })
-//     .catch(err => {
-//       alert('Error updating user: ' + err.message);
-//     });
-// }
